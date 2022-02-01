@@ -11,6 +11,9 @@ services:
 
     volumes:
       - "./workspaces:/home/valet/workspaces"
+      - "./config/.bashrc:/home/valet/.bashrc"
+      - "./secure/ssh/config:/home/valet/.ssh/config"
+      - "./secure/ssh/keys:/home/valet/.ssh/keys"
 
     ports:
       - "3000:3000"

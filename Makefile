@@ -33,6 +33,7 @@ clean:
 build-secure:
 	mkdir -p secure/ssh/keys
 	mkdir -p secure/vpn
+	touch secure/ssh/config
 
 # Pack your secure assets into an encrypted backup
 pack-secure:

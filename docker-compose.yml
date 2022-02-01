@@ -5,7 +5,7 @@ services:
   valet:
 
     container_name: valet
-    image: "valet-workspaces:1.0.0"
+    image: "smurfworks/valet-workspaces:1.0.0"
     tty: true
     restart: unless-stopped
 

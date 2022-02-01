@@ -24,10 +24,16 @@ RUN apt install -y \
 # Install some general tools that are useful
 RUN apt install -y \
     git curl nano htop sudo wget net-tools make zip \
-    pdftk mysql-client network-manager libnss3-tools jq xsel
+    mysql-client network-manager libnss3-tools jq xsel
 
+# PDF and Image manipulation
 RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb
 RUN apt install -y ./wkhtmltox_0.12.6-1.focal_amd64.deb
+RUN apt install -y pdftk
+RUN apt install -y inkscape
+RUN apt install -y ghostscript
+RUN apt install -y texlive-full
+RUN apt install -y potrace
 
 # PHP needed to use composer, to install valet
 RUN apt install -y \
